@@ -270,7 +270,7 @@ int main() {
 			break;
 		}
 
-		app();
+		if(key=='j' || key == 'k' || key == 'h' || key == 'l') app();
 		fill();
 		if (win()) {
 			cout << "Congratulations, you won! Your score: " << score;
