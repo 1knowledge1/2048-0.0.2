@@ -207,20 +207,35 @@ bool isstep()
 		for (int j = 0; j < 4; j++) {
 
 			if (j == 0) {
-				if (i == 0) if (area[i][j] == area[i][j + 1] || area[i][j] == area[i + 1][j]) return true;
-				if (i == 3) if (area[i][j] == area[i][j + 1] || area[i][j] == area[i - 1][j]) return true;
-				if (area[i][j] == area[i][j + 1] || area[i][j] == area[i + 1][j] || area[i][j] == area[i - 1][j]) return true;
+				if (i == 0) if (area[i][j] == area[i][j + 1] || 
+						area[i][j] == area[i + 1][j]) return true;
+				if (i == 3) if (area[i][j] == area[i][j + 1] || 
+						area[i][j] == area[i - 1][j]) return true;
+				if (area[i][j] == area[i][j + 1] || 
+				    area[i][j] == area[i + 1][j] || 
+				    area[i][j] == area[i - 1][j]) return true;
 			}
 			if (j == 1 || j == 2) {
-				if (i == 0) if (area[i][j] == area[i][j + 1] || area[i][j] == area[i][j-1] || area[i][j] == area[i+1][j]) return true;
-				if (i == 3) if (area[i][j] == area[i][j + 1] || area[i][j] == area[i][j - 1] || area[i][j] == area[i-1][j]) return true;
-				if (area[i][j] == area[i][j + 1] || area[i][j] == area[i][j - 1] || area[i][j] == area[i - 1][j] || area[i][j] == area[i + 1][j]) return true;
+				if (i == 0) if (area[i][j] == area[i][j + 1] || 
+						area[i][j] == area[i][j-1] || 
+						area[i][j] == area[i+1][j]) return true;
+				if (i == 3) if (area[i][j] == area[i][j + 1] || 
+						area[i][j] == area[i][j - 1] || 
+						area[i][j] == area[i-1][j]) return true;
+				if (area[i][j] == area[i][j + 1] || 
+				    area[i][j] == area[i][j - 1] ||
+				    area[i][j] == area[i - 1][j] || 
+				    area[i][j] == area[i + 1][j]) return true;
 			}
 			
 			if (j == 3) {
-				if (i == 0)if (area[i][j] == area[i][j - 1] || area[i][j] == area[i + 1][j]) return true;
-				if (i == 3)if (area[i][j] == area[i][j - 1] || area[i][j] == area[i - 1][j]) return true;
-				if (area[i][j] == area[i][j - 1] || area[i][j] == area[i + 1][j] || area[i][j] == area[i - 1][j]) return true;
+				if (i == 0)if (area[i][j] == area[i][j - 1] || 
+					       area[i][j] == area[i + 1][j]) return true;
+				if (i == 3)if (area[i][j] == area[i][j - 1] || 
+					       area[i][j] == area[i - 1][j]) return true;
+				if (area[i][j] == area[i][j - 1] || 
+				    area[i][j] == area[i + 1][j] || 
+				    area[i][j] == area[i - 1][j]) return true;
 			}
 
 		}
